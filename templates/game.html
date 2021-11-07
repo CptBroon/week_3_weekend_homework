@@ -1,0 +1,33 @@
+{% extends 'index.html' %}
+
+{% block content %}
+    <form action="/result" method='post'>
+        <div class="inputs">
+            <div class="player_1">
+                <label for="player_1_name">Player 1 name: </label>
+                <input type="text" name="player_1_name" id="player_1_name" required>
+
+                <label for="player_1_choice">Choice: </label>
+                <select name="player_1_choice" id="player_1_choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+            </div>
+            <div class="player_2">
+                <label for="player_2_name">Player 2 name: </label>
+                <input type="text" name="player_2_name" id="player_2_name" required>
+
+                <label for="player_2_choice">Choice: </label>
+                <select name="player_2_choice" id="player_2_choice">
+                    <option value="rock">Rock</option>
+                    <option value="paper">Paper</option>
+                    <option value="scissors">Scissors</option>
+                </select>
+            </div>  
+        </div>
+        <div class="button">
+            <input type="submit" value="Play game">
+        </div>
+    </form>
+{% endblock %}
